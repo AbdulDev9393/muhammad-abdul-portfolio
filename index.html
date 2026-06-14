@@ -223,23 +223,7 @@
         section {
             padding: 100px 0;
         }
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
+        
         .section-subtitle {
             text-align: center;
             color: var(--gray-400);
@@ -390,6 +374,9 @@
             color: white;
             transform: translateY(-3px);
         }
+        .section-title{
+            text-align: center;
+        }
 
         /* Back to top */
         .back-to-top {
@@ -430,6 +417,188 @@
             .hero-content h1 { font-size: 2.2rem; }
             .contact-form { padding: 1.8rem; }
         }
+        .about-section-new {
+            padding: 100px 0;
+            background: var(--dark, #0a0a0f);
+            font-family: 'Inter', sans-serif;
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .about-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--gray-100, #f1f5f9);
+        }
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient, linear-gradient(135deg, #7c3aed 0%, #ec4899 100%));
+            border-radius: 2px;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .about-card {
+            background: var(--dark-card, #111114);
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+        .about-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary, #7c3aed);
+            box-shadow: 0 20px 35px -15px rgba(124, 58, 237, 0.3);
+        }
+        .about-card h3 {
+            font-size: 1.8rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient, linear-gradient(135deg, #7c3aed 0%, #ec4899 100%));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .intro-text {
+            color: var(--gray-400, #94a3b8);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .highlight-text {
+            color: var(--gray-200, #e2e8f0);
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--primary, #7c3aed);
+            padding-left: 1.2rem;
+            font-style: italic;
+        }
+        .stats-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            flex: 1;
+            background: rgba(124, 58, 237, 0.08);
+            border-radius: 20px;
+            padding: 1rem;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--gradient, linear-gradient(135deg, #7c3aed 0%, #ec4899 100%));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-400, #94a3b8);
+            margin-top: 0.3rem;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            color: var(--gray-300, #cbd5e1);
+            font-size: 0.95rem;
+        }
+        .info-list li i {
+            width: 28px;
+            color: var(--primary, #7c3aed);
+            font-size: 1.1rem;
+        }
+        .drivers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .driver-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(124, 58, 237, 0.05);
+            padding: 0.8rem 1rem;
+            border-radius: 16px;
+            transition: all 0.2s ease;
+        }
+        .driver-item:hover {
+            background: rgba(124, 58, 237, 0.12);
+            transform: translateX(5px);
+        }
+        .driver-icon {
+            font-size: 1.6rem;
+        }
+        .driver-text strong {
+            color: white;
+            display: block;
+            font-size: 1rem;
+        }
+        .driver-text span {
+            color: var(--gray-400, #94a3b8);
+            font-size: 0.85rem;
+        }
+        .btn-about {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 2px solid var(--primary, #7c3aed);
+            color: var(--primary-light, #a78bfa);
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        .btn-about:hover {
+            background: var(--gradient, linear-gradient(135deg, #7c3aed 0%, #ec4899 100%));
+            border-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .about-grid { gap: 1.5rem; }
+            .about-title { font-size: 2.2rem; }
+        }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-section-new { padding: 60px 0; }
+            .stats-row { flex-direction: column; gap: 0.8rem; }
+            .stat-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1.2rem; }
+            .stat-number { font-size: 1.4rem; }
+            .stat-label { margin-top: 0; }
+        }
     </style>
 </head>
 <body>
@@ -465,8 +634,8 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
                     <div class="hero-content">
-                        <span class="hero-tag"><i class="fas fa-code me-2"></i>Full Stack</span>
-                        <h1>Crafting Digital <span class="gradient-text">PHP Laravel</span>Professional Dec</h1>
+                        <span class="hero-tag"><i class="fas fa-code me-2"></i>2+ Years of Excellence</span>
+                        <h1>Crafting Digital <span class="gradient-text">Experiences</span> That Matter</h1>
                         <p class="text-gray-400 fs-5 mb-4">I'm <strong class="text-white">Muhammad Abdul</strong>, a Full Stack Web Developer with over 5 years of expertise in Laravel, PHP, JavaScript, and modern web technologies. I build fast, scalable, and beautiful web applications.</p>
                        <div class="d-flex gap-3 flex-wrap">
                             <a href="https://partsfinder.ae/" class="btn btn-primary">
@@ -489,56 +658,94 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="row g-5">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="card-glass">
-                        <h3 class="mb-3">Who Am I?</h3>
-                        <p class="text-gray-400 mb-4">I'm a passionate web developer based in Punjab, Pakistan. Over the last 5 years, I've had the privilege of working with startups, agencies, and established businesses to deliver high-quality web solutions.</p>
-                        <p class="text-gray-400 mb-4">My expertise spans from custom CMS development, school management systems, e-commerce platforms, to complex Laravel applications. I pride myself on writing clean, maintainable code and delivering projects on time.</p>
-                        <div class="row mt-4">
-                            <div class="col-6">
-                                <p><i class="fas fa-check-circle text-primary me-2"></i> 50+ Projects Completed</p>
-                                <p><i class="fas fa-check-circle text-primary me-2"></i> 25+ Happy Clients</p>
+       <section class="about-section-new">
+        <div class="about-container">
+            <h2 class="about-title" data-aos="fade-up">About Me</h2>
+            <div class="about-grid">
+                <!-- Left Column: Who Am I + details -->
+                <div class="about-card" data-aos="fade-right">
+                    <h3><i class="fas fa-user-astronaut me-2" style="background: transparent; -webkit-background-clip: unset; color: var(--primary);"></i> Who Am I?</h3>
+                    <p class="intro-text">I'm <strong class="text-white">Muhammad Abdul</strong>, a passionate Full Stack Web Developer based in Punjab, Pakistan. Over the last 5+ years, I've helped startups, agencies, and enterprises turn complex ideas into powerful digital products.</p>
+                    <p class="intro-text">My approach blends modern design, clean code, and performance-first thinking. I specialize in Laravel, PHP, JavaScript ecosystems, and delivering scalable solutions that users love.</p>
+                    <div class="highlight-text">
+                        <i class="fas fa-quote-left me-2" style="color: var(--primary);"></i> Code is poetry — I write clean, maintainable, and future-proof applications.
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                    <ul class="info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>📍 Punjab, Pakistan (Remote / Worldwide)</span></li>
+                        <li><i class="fas fa-laptop-code"></i> <span>💻 5+ years of professional experience</span></li>
+                        <li><i class="fas fa-trophy"></i> <span>🏆 98% client satisfaction rate</span></li>
+                        <li><i class="fas fa-clock"></i> <span>⏱️ On-time delivery guarantee</span></li>
+                    </ul>
+                    <a href="#contact" class="btn-about"><i class="fas fa-paper-plane"></i> Let's connect</a>
+                </div>
+
+                <!-- Right Column: What Drives Me / Philosophy Card -->
+                <div class="about-card" data-aos="fade-left">
+                    <h3><i class="fas fa-heart me-2" style="background: transparent; -webkit-background-clip: unset; color: var(--primary);"></i> What Drives Me</h3>
+                    <p class="intro-text" style="margin-bottom: 1.2rem;">I don't just write code — I build experiences that solve real problems. Every project is an opportunity to push boundaries and create meaningful impact.</p>
+                    <div class="drivers-list">
+                        <div class="driver-item">
+                            <div class="driver-icon"><i class="fas fa-bullseye" style="color: var(--primary-light);"></i></div>
+                            <div class="driver-text">
+                                <strong>Purpose-driven development</strong>
+                                <span>Code that aligns with business goals & user needs</span>
                             </div>
-                            <div class="col-6">
-                                <p><i class="fas fa-check-circle text-primary me-2"></i> 24/7 Support</p>
-                                <p><i class="fas fa-check-circle text-primary me-2"></i> Bug-Free Guarantee</p>
+                        </div>
+                        <div class="driver-item">
+                            <div class="driver-icon"><i class="fas fa-gem" style="color: var(--primary-light);"></i></div>
+                            <div class="driver-text">
+                                <strong>Quality obsessed</strong>
+                                <span>Pixel perfect UI, robust backend, zero compromise</span>
+                            </div>
+                        </div>
+                        <div class="driver-item">
+                            <div class="driver-icon"><i class="fas fa-handshake" style="color: var(--primary-light);"></i></div>
+                            <div class="driver-text">
+                                <strong>Client partnership</strong>
+                                <span>Transparent communication & long-term relationships</span>
+                            </div>
+                        </div>
+                        <div class="driver-item">
+                            <div class="driver-icon"><i class="fas fa-rocket" style="color: var(--primary-light);"></i></div>
+                            <div class="driver-text">
+                                <strong>Continuous growth</strong>
+                                <span>Always learning new tech & best practices</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="card-glass">
-                        <h3 class="mb-4">Technical Skills</h3>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>PHP / Laravel</span><span>92%</span></div>
-                            <div class="progress-bar-custom"><div class="progress-fill" data-width="92"></div></div>
+                    <hr style="background: rgba(124,58,237,0.3); margin: 1.8rem 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                        <div>
+                            <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                            <span class="text-gray-400" style="color: var(--gray-400);"> Bug-free guarantee</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>JavaScript / jQuery</span><span>88%</span></div>
-                            <div class="progress-bar-custom"><div class="progress-fill" data-width="88"></div></div>
+                        <div>
+                            <i class="fas fa-shield-alt" style="color: var(--primary);"></i>
+                            <span class="text-gray-400" style="color: var(--gray-400);"> Secure & scalable</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>HTML5 / CSS3 / Bootstrap</span><span>95%</span></div>
-                            <div class="progress-bar-custom"><div class="progress-fill" data-width="95"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>MySQL / PostgreSQL</span><span>90%</span></div>
-                            <div class="progress-bar-custom"><div class="progress-fill" data-width="90"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header"><span>RESTful APIs / Integration</span><span>85%</span></div>
-                            <div class="progress-bar-custom"><div class="progress-fill" data-width="85"></div></div>
+                        <div>
+                            <i class="fas fa-sync-alt" style="color: var(--primary);"></i>
+                            <span class="text-gray-400" style="color: var(--gray-400);"> Lifetime updates</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
     <section id="services" style="background: var(--dark-card);">
         <div class="container">
@@ -775,6 +982,26 @@
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
                 if(link.getAttribute('href') === `#${current}`) link.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        } else {
+            console.log("AOS not loaded, but section works fine");
+        }
+        // Smooth scroll for .btn-about if #contact exists
+        document.querySelectorAll('.btn-about').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             });
         });
     </script>
